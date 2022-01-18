@@ -1,7 +1,7 @@
 spec:
   project: default
   source:
-    repoURL: "https://github.com/lucacalcaterra/k0s-pref-argocd.git"
+    repoURL: "https://github.com/lucacalcaterra/k0s-prefmc-argocd.git"
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
