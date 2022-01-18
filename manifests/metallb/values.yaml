@@ -1,0 +1,23 @@
+metallb:
+  configInline:
+    address-pools:
+    - name: k8s-ip-space
+      protocol: layer2
+      addresses:
+      - 172.24.1.16-172.24.1.20
+    - name: traefik
+      protocol: layer2
+      addresses:
+      - 172.24.1.10/32
+      auto-assign: false
+    - name: adguard-home
+      protocol: layer2
+      addresses:
+      - 172.24.1.11/32
+      auto-assign: false
+    - name: personal-ovpn
+      protocol: layer2
+      addresses:
+      - 172.24.1.12/32
+      auto-assign: false
+

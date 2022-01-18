@@ -1,0 +1,21 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: traefik-dashboard-home-lcisp
+  namespace: traefik
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: Host(`traefik.home.lcisp.it`)
+      kind: Rule
+      middlewares:
+        - name: gzip-compress
+        - name: default-sso@kubernetescrd
+      services:
+        - name: api@internal
+          kind: TraefikService
+      #middlewares:
+      #  - name: auth

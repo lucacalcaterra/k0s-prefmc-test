@@ -1,0 +1,38 @@
+adguard-home: 
+  service:
+
+    # main:
+    #   type: LoadBalancer
+    #   #loadBalancerIP: 172.24.1.11
+    #   annotations:
+    #     metallb.universe.tf/address-pool: adguard-home
+    #     metallb.universe.tf/allow-shared-ip: adguard
+    dns-tcp:
+      type: LoadBalancer
+      #loadBalancerIP: 172.24.1.11
+      annotations:
+        metallb.universe.tf/address-pool: adguard-home
+        metallb.universe.tf/allow-shared-ip: adguard
+    dns-udp:
+      type: LoadBalancer
+      #loadBalancerIP: 172.24.1.11
+      annotations:
+        metallb.universe.tf/address-pool: adguard-home
+        metallb.universe.tf/allow-shared-ip: adguard
+
+
+  env:
+    TZ: "Europe/Rome"
+    
+  persistence:
+    config:
+      enabled: true
+      mountPath: /opt/adguardhome/conf
+      accessMode: ReadWriteOnce
+      size: 200Mi
+    data:
+      enabled: true
+      mountPath: /opt/adguardhome/work
+      accessMode: ReadWriteOnce
+      size: 1Gi
+

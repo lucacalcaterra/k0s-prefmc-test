@@ -1,0 +1,5 @@
+openebs:
+  ndmOperator:
+    enabled: false
+  ndm:
+    enabled: false
