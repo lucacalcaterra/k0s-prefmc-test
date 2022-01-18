@@ -8,7 +8,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`argocd.home.lcisp.it`)
+    - match: Host(`argocd.pref.lcisp.it`)
       kind: Rule
       middlewares:
         - name: gzip-compress

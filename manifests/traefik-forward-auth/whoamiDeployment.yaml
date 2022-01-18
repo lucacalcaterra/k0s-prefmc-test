@@ -37,7 +37,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`whoami.home.lcisp.it`)
+    - match: Host(`whoami.pref.lcisp.it`)
       kind: Rule
       middlewares:
         # - name: headers-default@file

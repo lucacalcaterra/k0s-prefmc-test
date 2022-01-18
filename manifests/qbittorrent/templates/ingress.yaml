@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`qbittorrent.home.lcisp.it`)
+    - match: Host(`qbittorrent.pref.lcisp.it`)
       kind: Rule
       middlewares:
         - name: gzip-compress

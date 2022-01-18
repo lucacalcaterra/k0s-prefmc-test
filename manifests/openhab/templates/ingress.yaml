@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`openhab.home.lcisp.it`)
+    - match: Host(`openhab.pref.lcisp.it`)
       kind: Rule
       middlewares:
         - name: gzip-compress

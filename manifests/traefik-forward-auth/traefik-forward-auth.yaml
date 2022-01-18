@@ -40,7 +40,7 @@ spec:
             - name: COOKIE_DOMAIN
               value: home.lcisp.it
             - name: AUTH_HOST
-              value: auth.home.lcisp.it
+              value: auth.pref.lcisp.it
             - name: INSECURE_COOKIE
               value: "false"
             # - name: URL_PATH
@@ -98,7 +98,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`auth.home.lcisp.it`)
+    - match: Host(`auth.pref.lcisp.it`)
       kind: Rule
       services:
         - name: traefik-sso

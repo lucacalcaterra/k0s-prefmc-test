@@ -9,7 +9,7 @@ spec:
     #- web
     - websecure
   routes:
-    - match: Host(`adguard.home.lcisp.it`)
+    - match: Host(`adguard.pref.lcisp.it`)
       kind: Rule
       middlewares:
         - name: traefik-gzip-compress@kubernetescrd          

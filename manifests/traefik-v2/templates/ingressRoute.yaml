@@ -9,7 +9,7 @@ spec:
     - web
     - websecure
   routes:
-    - match: Host(`traefik.home.lcisp.it`)
+    - match: Host(`traefik.pref.lcisp.it`)
       kind: Rule
       middlewares:
         - name: gzip-compress
